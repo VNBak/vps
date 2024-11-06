@@ -15,7 +15,7 @@
 3 0 * * * cd /data/vn && robusta --mode=manage --method=db.backup && git pull && git add . && git commit -m "CBN" && git push
 ## strategy
 37 7 * * 1-5 cd /data/vn && USERNAME=vni screen -m -d robusta strategy
-48 7 * * * cd /data/vn && robusta --mode=manage --method=db.backup && git pull && git add . && git commit -m "DB" && git push
+49 7 * * * cd /data/vn && robusta --mode=manage --method=db.backup && git pull && git add . && git commit -m "DB" && git push
 ## etf-stocks-picker
 11 2,8 * * 1-5 cd /data/vn && USERNAME=vni screen -m -d robusta strategy/combine/etf-stocks-picker.js
 12 8 * * 1-5 cd /data/vn && USERNAME=vni screen -m -d robusta strategy/combine/notify.js

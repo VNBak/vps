@@ -1,5 +1,7 @@
 #!/bin/sh
 
+curl -fsSL https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
+
 apt update
 apt install git unzip -y
 
@@ -70,5 +72,3 @@ if [ ! -d "node_modules" ]; then
   NPM_CONFIG_UPDATE_NOTIFIER=false robusta --mode=npm i --omit=dev --prefer-offline --no-audit --progress=false
   rm LICENSE.key
 fi
-
-curl -fsSL https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -

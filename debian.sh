@@ -61,6 +61,7 @@ if [ -d "vn30f" ]; then
 else
   git clone --depth=1 https://github.com/VNBak/vn30f.git
   cd vn30f
+  ln -s /robusta/csv .
   ln -s /data/strategy/momentum-vn30f/index.js strategy/momentum-vn30f/
   ln -s /data/strategy/trend-vn30f/index.js strategy/trend-vn30f/
   robusta --mode=manage --method=db.restore --force=1

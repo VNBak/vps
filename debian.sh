@@ -46,6 +46,7 @@ else
   ln -s /data/strategy/combine/ivqa.js strategy/combine/
   ln -s /data/strategy/combine/notify.js strategy/combine/
   ln -s /data/strategy/etf-stocks-picker/index.js strategy/combine/etf-stocks-picker.js
+  ln -s /data/strategy/etf-diamond/index.js strategy/combine/etf-diamond.js
   ln -s /data/strategy/momentum-vn100/index.js strategy/momentum-vn100/
   ln -s /data/strategy/risk-parity/index.js strategy/risk-parity/
   ln -s /data/strategy/risk-parity-hnx/index.js strategy/risk-parity-hnx/

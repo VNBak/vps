@@ -51,7 +51,6 @@ else
   ln -s /data/strategy/risk-parity/index.js strategy/risk-parity/
   ln -s /data/strategy/risk-parity-hnx/index.js strategy/risk-parity-hnx/
   ln -s /data/strategy/ctck/index.js strategy/ctck/
-  ln -s /data/strategy/value-vn100/index.js strategy/value-vn100/
   robusta --mode=manage --method=db.restore --force=1
 fi
 

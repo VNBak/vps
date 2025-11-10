@@ -2,8 +2,8 @@
 ## monthly rolling
 49,51 13 * * 5 cd /data/vn30f && robusta --mode=manage --method=trade.rolling --strategy=2
 ## momentum-vn30f
-52,54 13 * * 1-5 cd /data/vn30f && USERNAME=vn30f screen -m -d robusta strategy
-47,53 13,14 * * * screen -X quit
+57,59 13 * * 1-5 cd /data/vn30f && USERNAME=vn30f screen -m -d robusta strategy
+47,58 13,14 * * * screen -X quit
 ## daily backup
 48 14 * * 1-5 cd /data/vn30f && robusta --mode=manage --method=db.backup && git pull && git add . && git commit -m "DB" && git push
 

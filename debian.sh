@@ -15,6 +15,7 @@ git config --global user.email rs@aicafe.one
 
 cd /bin
 wget -q -O - https://github.com/AICafe1/robusta-server/releases/latest/download/robusta-linux.tgz | tar -xz
+wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/chrome.tgz | tar -xz
 
 cd /
 if [ ! -d "robusta" ]; then

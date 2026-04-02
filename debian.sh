@@ -1,9 +1,9 @@
 #!/bin/sh
 
-curl -fsSL https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
-
 apt update
 apt install git unzip -y
+
+curl -fsSL https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
 
 echo '#!/bin/sh
 echo username=$GIT_USERNAME

@@ -3,7 +3,7 @@
 apt update
 apt install git unzip -y
 
-curl -fsSL https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
+wget -q -O - https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
 
 echo '#!/bin/sh
 echo username=$GIT_USERNAME

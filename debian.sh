@@ -24,6 +24,12 @@ if [ ! -d "robusta" ]; then
   wget -q https://github.com/AICafe1/robusta-server/releases/download/v1.0.0/vn.tgz.zip
   unzip -qpP $VNZIP vn.tgz.zip | tar -xz
   rm vn.tgz.zip
+  if [ ! -d "csv" ]; then
+    sleep 30
+    wget -q https://github.com/AICafe1/robusta-server/releases/download/v1.0.0/vn.tgz.zip
+    unzip -qpP $VNZIP vn.tgz.zip | tar -xz
+    rm vn.tgz.zip
+  fi
 fi
 
 if [ ! -d "/data" ]; then

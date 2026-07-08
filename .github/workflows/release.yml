@@ -1,0 +1,17 @@
+name: Release
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Release v1.0
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: v1.0
+          files: |
+            *.sh

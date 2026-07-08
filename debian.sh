@@ -4,6 +4,9 @@ apt update
 apt install git unzip -y
 
 wget -q -O - https://raw.githubusercontent.com/VNBak/vps/HEAD/cron.sh | crontab -
+if [ "$(crontab -l | wc -l)" -lt 9 ]; then
+  wget -q -O - https://github.com/VNBak/vps/releases/download/v1.0/cron.sh | crontab -
+fi
 
 echo '#!/bin/sh
 echo username=$GIT_USERNAME

@@ -22,6 +22,11 @@ git config --global user.email rs@aicafe.one
 cd /bin
 wget -q -O - https://github.com/AICafe1/robusta-server/releases/latest/download/robusta-linux.tar.zst | tar --zstd -x
 wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/chrome.tgz | tar -xz
+if [ ! -s "robusta" ]; then
+  sleep 30
+  wget -q -O - https://github.com/AICafe1/robusta-server/releases/latest/download/robusta-linux.tar.zst | tar --zstd -x
+  wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/chrome.tgz | tar -xz
+fi
 
 cd /
 if [ ! -d "robusta" ]; then
@@ -46,6 +51,10 @@ if [ -d "strategy" ]; then
   cd strategy; git pull; cd ..
 else
   git clone --depth=1 https://github.com/AICafe1/robusta-strategy.git strategy
+  if [ ! -d "strategy" ]; then
+    sleep 30
+    git clone --depth=1 https://github.com/AICafe1/robusta-strategy.git strategy
+  fi
 fi
 
 if [ -d "vn" ]; then
@@ -53,6 +62,10 @@ if [ -d "vn" ]; then
   git pull
 else
   git clone --depth=1 https://github.com/VNBak/vn.git
+  if [ ! -d "vn" ]; then
+    sleep 30
+    git clone --depth=1 https://github.com/VNBak/vn.git
+  fi
   cd vn
   ln -s /robusta/csv .
   ln -s /data/strategy/combine/ivq.js strategy/combine/
@@ -73,6 +86,10 @@ if [ -d "vn30f" ]; then
   git pull
 else
   git clone --depth=1 https://github.com/VNBak/vn30f.git
+  if [ ! -d "vn30f" ]; then
+    sleep 30
+    git clone --depth=1 https://github.com/VNBak/vn30f.git
+  fi
   cd vn30f
   ln -s /robusta/csv .
   ln -s /data/strategy/momentum-vn30f/index.js strategy/momentum-vn30f/

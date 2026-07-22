@@ -25,14 +25,14 @@ wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/
 if [ ! -s "robusta" ]; then
   sleep 30
   wget -q -O - https://github.com/AICafe1/robusta-server/releases/latest/download/robusta-linux.tar.zst | tar --zstd -x
-  wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/chrome.tgz | tar -xz
+  wget -q -O - https://github.com/AICafe1/robusta-server/releases/download/v1.0.0/chrome.tgz | tar -xz
 fi
 
 cd /
 if [ ! -d "robusta" ]; then
   mkdir robusta
   cd robusta
-  wget -q https://github.com/AICafe1/robusta-server/releases/download/v1.0.0/vn.tgz.zip
+  wget -q https://github.com/AICafe1/robusta-server/releases/download/v1.0.2/vn.tgz.zip
   unzip -qpP $VNZIP vn.tgz.zip | tar -xz
   rm vn.tgz.zip
   if [ ! -d "csv" ]; then

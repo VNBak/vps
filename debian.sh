@@ -93,6 +93,7 @@ else
   cd vn30f
   ln -s /robusta/csv .
   ln -s /data/strategy/momentum-vn30f/index.js strategy/momentum-vn30f/
+  ln -s /data/strategy/foreign-vn30f/index.js strategy/foreign-vn30f/
   robusta --mode=manage --method=db.restore --force=1
 fi
 
